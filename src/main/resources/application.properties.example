@@ -10,3 +10,12 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 # spring jpa ddl-auto for validating db-schema
 spring.jpa.hibernate.ddl-auto=validate
+
+# ========================================
+# = Flyway Configuration
+# ========================================
+flyway.locations = classpath:db/migration
+flyway.url = jdbc:mysql://127.0.0.1:3306/
+flyway.schemas= tutor_media
+flyway.user = 
+flyway.password = 
