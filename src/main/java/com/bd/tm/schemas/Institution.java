@@ -1,13 +1,13 @@
 package com.bd.tm.schemas;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -18,12 +18,9 @@ public class Institution extends BaseEntity {
 
 	private static final long serialVersionUID = -7297213157674416649L;
 	
-	@Column(name = "full_name")
+	@Column
 	private String fullName;
 
-	@Column(name = "short_name")
+	@Column
 	private String shortName;
-	
-	@OneToOne(mappedBy="subjectOfStudy")
-	private Teacher teacher;
 }
