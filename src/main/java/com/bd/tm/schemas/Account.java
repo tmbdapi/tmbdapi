@@ -20,24 +20,24 @@ public class Account extends BaseEntity {
 
 	private static final long serialVersionUID = -8367681116861742571L;
 
-	@Column(name = "first_name")
-	private String firstname;
+	@Column
+	private String firstName;
 
-	@Column(name = "last_name")
+	@Column
 	private String lastName;
 
-	@Column(name = "phone_number", unique = true)
+	@Column(unique = true)
 	private String phoneNumber;
 
-	@Column(name="email")
+	@Column
 	private String email;
 
-	@Column(name="gender", columnDefinition = "TINYINT")
+	@Column(columnDefinition = "TINYINT")
 	private Gender gender;
 
-	@Column(name="role", columnDefinition = "TINYINT")
+	@Column(columnDefinition = "TINYINT")
 	private RoleType role;
 
-	@Column(name="password")
+	@Column
 	private String password;
 }
